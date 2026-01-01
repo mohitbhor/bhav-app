@@ -1,0 +1,6 @@
+# Exclude the folder containing secrets
+security/
+
+# Or exclude specific sensitive files
+.env
+appsettings.json
