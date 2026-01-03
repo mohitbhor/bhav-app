@@ -61,7 +61,7 @@ function App() {
 
   const loadMasterData = async () => {
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://YOUR_FUNCTION_APP_NAME.azurewebsites.net';
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://bhavapi-hhgye6gwg8fzcqaz.centralus-01.azurewebsites.net';
       const response = await fetch(`${API_BASE_URL}/api/getMasterData`);
       const data = await response.json();
       
@@ -82,7 +82,7 @@ function App() {
 
   const saveMasterData = async () => {
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://YOUR_FUNCTION_APP_NAME.azurewebsites.net';
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://bhavapi-hhgye6gwg8fzcqaz.centralus-01.azurewebsites.net';
       await fetch(`${API_BASE_URL}/api/saveMasterData`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -161,7 +161,7 @@ function App() {
     }
 
     try {
-      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://YOUR_FUNCTION_APP_NAME.azurewebsites.net';
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://bhavapi-hhgye6gwg8fzcqaz.centralus-01.azurewebsites.net';
       const response = await fetch(`${API_BASE_URL}/api/saveEntries`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
