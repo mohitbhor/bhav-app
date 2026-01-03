@@ -61,7 +61,8 @@ function App() {
 
   const loadMasterData = async () => {
     try {
-      const response = await fetch('/api/getMasterData');
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://YOUR_FUNCTION_APP_NAME.azurewebsites.net';
+      const response = await fetch(`${API_BASE_URL}/api/getMasterData`);
       const data = await response.json();
       
       setVegetables(data.vegetables || DEFAULT_VEGETABLES);
@@ -81,7 +82,8 @@ function App() {
 
   const saveMasterData = async () => {
     try {
-      await fetch('/api/saveMasterData', {
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://YOUR_FUNCTION_APP_NAME.azurewebsites.net';
+      await fetch(`${API_BASE_URL}/api/saveMasterData`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -159,7 +161,8 @@ function App() {
     }
 
     try {
-      const response = await fetch('/api/saveEntries', {
+      const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://YOUR_FUNCTION_APP_NAME.azurewebsites.net';
+      const response = await fetch(`${API_BASE_URL}/api/saveEntries`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ entries })

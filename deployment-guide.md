@@ -146,7 +146,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/bhav-app.git
+git remote add origin https://<GIT PAT >@github.com/mohitbhor/bhav-app.git
 git push -u origin main
 ```
 
@@ -164,6 +164,9 @@ npm install -g @azure/static-web-apps-cli
 swa deploy ./dist \
   --api-location ./api \
   --deployment-token YOUR_DEPLOYMENT_TOKEN_HERE
+  --api-language node \
+  --api-version 20 \
+  --env production
 ```
 
 ---
@@ -174,12 +177,12 @@ swa deploy ./dist \
 
 1. Go to Azure Portal
 2. Open your Static Web App: **bhav-app**
-3. Click **Settings → Configuration**
+3. Click **Settings → Enviroment Valiable**
 4. Click **+ Add**
 5. Add:
    - **Name**: `AZURE_STORAGE_CONNECTION_STRING`
    - **Value**: Paste the connection string from Step 2.4
-6. Click **Save**
+6. Click **Save/Apply**
 
 ---
 
